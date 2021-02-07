@@ -1,0 +1,46 @@
+$marketing-site-hero-height: 65vh;
+
+// bg images
+.hero--homepage {
+  background: url('/assets/img/fpo/house-186400_1920.jpg') top right no-repeat;
+}
+
+// general styles
+.site-hero {
+  height: $marketing-site-hero-height;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 40em) {
+    background-position: center center;
+  }
+}
+
+.site-hero-content {
+  max-width: $global-width;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  @media screen and (min-width: 40em) {
+    padding-left: 40%;
+  }
+  &.site-hero-content--fullwidth {
+    @media screen and (min-width: 40em) {
+      padding-left: 5%;
+    }
+  }
+  &-inner {
+    padding: 1rem;
+  }
+  &-inner--light {
+    background: $color-white-transparent;
+  }
+  &-inner--dark {
+    background: $color-black-transparent;
+  }
+  .h1, h2, .h2, h3, .h3 {
+    line-height: 1.1;
+  }
+}
+

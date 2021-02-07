@@ -1,0 +1,49 @@
+.no-js {
+  @include breakpoint(small only) {
+    // .top-bar {
+    //   display: none;
+    // }
+  }
+
+  @include breakpoint(medium) {
+    // .title-bar {
+    //   display: none;
+    // }
+  }
+}
+
+[data-sticky] {
+  width: 100%;
+}
+.sticky-container {
+  z-index: 5;
+}
+.menubar-container {
+  background: #ffffff;
+  box-shadow: 0 2px 8px -1px rgba(0,0,0,0.06);
+  position: relative;
+}
+.menu-icon {
+  text-indent: -9999px;
+}
+.header-logo {
+  width: 100%;
+  max-width: 300px;
+}
+.header-menu {
+  background-color: $white;
+  //color: $white;
+  &-content {
+    margin-top: 2.25rem;
+  }
+  a {
+    //color: $white;
+  }
+  .close-button {
+    //color: $white;
+  }
+  .menu {
+    margin-left: 1rem;
+  }
+}
+
