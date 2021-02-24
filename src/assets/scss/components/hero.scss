@@ -1,19 +1,20 @@
-$marketing-site-hero-height: 65vh;
+$hero-height: 40vh;
+$pc-hero-height: 65vh;
 
 // bg images
-.hero--homepage {
-  background: url('/assets/img/fpo/house-186400_1920.jpg') top right no-repeat;
-}
 
 // general styles
 .site-hero {
-  height: $marketing-site-hero-height;
+  height: $hero-height;
   background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
   @media screen and (min-width: 40em) {
     background-position: center center;
+    height: $pc-hero-height;
   }
 }
 

@@ -8,7 +8,7 @@
 
 // Global styles
 @include foundation-global-styles;
-@include foundation-forms;
+//@include foundation-forms;
 @include foundation-typography;
 
 // Grids (choose one)
@@ -18,7 +18,7 @@
 
 // Generic components
 @include foundation-button;
-@include foundation-button-group;
+// @include foundation-button-group;
 @include foundation-close-button;
 // @include foundation-label;
 // @include foundation-progress-bar;
@@ -32,7 +32,7 @@
 @include foundation-callout;
 @include foundation-card;
 @include foundation-dropdown;
-@include foundation-pagination;
+// @include foundation-pagination;
 @include foundation-tooltip;
 
 // Containers
@@ -70,9 +70,11 @@
 // custom vars
 $color-white-transparent: rgba(255,255,255,0.8);
 $color-black-transparent: rgba(0,0,0,0.5);
+$color-cream: #FFFCF5;
+
 
 @import 'components/sticky-menu';
-@import 'components/image-gallery';
+@import 'components/gallery';
 @import 'components/hero';
 @import 'components/site-footer';
 @import 'components/filter-simple';

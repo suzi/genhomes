@@ -19,7 +19,7 @@
   z-index: 5;
 }
 .menubar-container {
-  background: #ffffff;
+  background: $white;
   box-shadow: 0 2px 8px -1px rgba(0,0,0,0.06);
   position: relative;
 }
@@ -46,4 +46,20 @@
     margin-left: 1rem;
   }
 }
+.menubar-top {
+  background-color: $black;
+  padding: .5rem 1rem;
+  &-link {
+    color: $white;
+    &:hover {
+      color: $color-cream;
+    }
+  }
+}
 
+.icon--phone {
+  width: 18px;
+  height: 18px;
+  margin-left: 18px;
+  margin-right: 2rem;
+}

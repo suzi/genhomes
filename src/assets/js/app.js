@@ -18,11 +18,6 @@ $(document).foundation();
 
 // Custom / components below
 
-// gallery
-$('.sim-thumb').on('click', function() {
-  $('#main-product-image').attr('src', $(this).data('image'));
-})
-
 // shows and hides filtered items
 $(".filter-simple-button").click(function() {
   var value = $(this).attr('data-filter');
@@ -59,3 +54,9 @@ if ($stickyBar.length && $siteContent.length) {
   });
 }
 */
+
+$('.gallery-thumb').on('click', function () {
+  var elem = $('#gallery-main-image');
+  elem.attr('src', $(this).data('image'));
+  Foundation.Motion.animateIn(elem, 'fade-in');
+})

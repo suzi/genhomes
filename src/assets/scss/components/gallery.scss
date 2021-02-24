@@ -1,22 +1,25 @@
-.product-image-gallery {
+.image-gallery {
   background-color: $white;
   padding: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
-.pdp-product-image {
-  margin-bottom: 20px;
+.gallery-main-image {
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-height: 70vh;
 }
 
-.product-thumbs {
-  
+.gallery-thumbs {
+
   a {
     margin-left: 8px;
     margin-right: 8px;
     padding: 0 !important;
-    
+
     img {
       @include thumbnail;
-      border-radius: 3px;
       width: 50px;
       height: 50px;
       border: none;

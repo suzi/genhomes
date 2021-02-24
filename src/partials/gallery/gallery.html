@@ -1,0 +1,10 @@
+
+<div class="image-gallery align-center">
+  <img class="gallery-main-image" id="gallery-main-image" src="{{ mainimage }}" alt="">
+  <br>
+  <ul class="menu gallery-thumbs align-center">
+    {{#each images}}
+    <li> <a class="gallery-thumb" data-image="{{ this.file }}"><img src="{{ this.file }}" alt=""></a> </li>
+    {{/each}}
+  </ul>
+</div>

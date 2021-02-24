@@ -22,6 +22,9 @@ $site-footer-bg: #2c3840;
       margin-bottom: 2rem;
     }
   }
+  a.footer-link {
+    color: $white;
+  }
 }
 
 .site-footer-name {
@@ -64,7 +67,7 @@ $site-footer-bg: #2c3840;
     justify-content: flex-end;
 
     a {
-      color: lighten($site-footer-bg, 40%);
+      color: $white;
     }
 
     @include breakpoint(medium down) {
