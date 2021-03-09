@@ -1,29 +1,31 @@
 <div data-sticky-container>
   <div class="sticky" data-sticky data-sticky-on="small" data-options="marginTop:0;">
     <div class="menubar-container">
-      <div class="menubar-top align-right">
-        <div class="grid-container text-right">
-          <a class="menubar-top-link" href="tel:1 (559) 323-9700">
-            1 (559) 323-9700
-            <img src="/assets/img/icons/phone--light.svg" alt="phone" class="icon--phone" />
-          </a>
-        </div>
-      </div>
+
       <div class="menubar-grid grid-container grid-x grid-padding-x grid-padding-y">
-        <div class="cell small-8">
-          <a href="/" class="menubar-logo"><img src="/assets/img/logo-green.svg" alt="Generation Homes" class="header-logo" width="200" /></a>
-        </div>
-        <div class="cell small-4">
-          <div class="title-bar align-right" data-hide-for="null">
+        <div class="cell small-2">
+          <div class="title-bar align-left" data-hide-for="null">
             <button class="menu-icon" type="button" data-toggle="header-menu">Menu</button>
           </div>
         </div>
+
+        <div class="cell small-8 text-center">
+          <a href="/" class="menubar-logo"><img src="/assets/img/logo-green.svg" alt="Generation Homes" class="header-logo" width="200" /></a>
+        </div>
+
+        <div class="cell small-2 text-right">
+          <a class="menubar-phone-link" href="tel:1 (559) 323-9700">
+            <span class="hide-for-small-only">559.323.9700</span>
+            <img src="/assets/img/icons/phone.svg" alt="phone" class="show-for-small-only icon--phone" width="18px" height="18px" />
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
 
-<div class="header-menu off-canvas position-right" id="header-menu" data-off-canvas>
+<div class="header-menu off-canvas position-left" id="header-menu" data-off-canvas>
   <button class="close-button" aria-label="Close menu" type="button" data-close>
     <span aria-hidden="true">&times;</span>
   </button>
@@ -32,7 +34,7 @@
     <li>
       <h3 class="h5"><a href="/services.html">Services</a></h3>
       <ul class="vertical menu">
-        <li><a href="/services-remodel.html">Home Remodel</a></li>
+        <li><a href="/services-remodel.html">Home Remodeling</a></li>
         <li><a href="/services-new-homes.html">New Home Construction</a></li>
         <li><a href="/services-commercial.html">Commercial</a></li>
       </ul>

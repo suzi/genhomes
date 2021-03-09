@@ -5,6 +5,7 @@
 @import 'motion-ui';
 // custom font
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 // Global styles
 @include foundation-global-styles;
@@ -78,3 +79,7 @@ $color-cream: #FFFCF5;
 @import 'components/hero';
 @import 'components/site-footer';
 @import 'components/filter-simple';
+
+.text--light {
+  color: $white;
+}

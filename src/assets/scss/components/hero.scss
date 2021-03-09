@@ -1,32 +1,84 @@
-$hero-height: 40vh;
-$pc-hero-height: 65vh;
 
-// bg images
-
-// general styles
-.site-hero {
-  height: $hero-height;
-  background-size: cover;
-  background-position: top right;
-  background-repeat: no-repeat;
-  display: flex;
+.hero {
   align-items: center;
+  display: flex;
+  height: 25vh;
   margin-bottom: 2rem;
+  position: relative;
   @media screen and (min-width: 40em) {
-    background-position: center center;
-    height: $pc-hero-height;
+    height: 40vh;
+  }
+  &.hero--large {
+    height: 40vh;
+    @media screen and (min-width: 40em) {
+      height: 65vh;
+    }
+  }
+  &.bg--dark {
+    background-color: $black;
+  }
+  &.align--end {
+    align-items: flex-end;
+  }
+  &.align--start {
+    align-items: flex-start;
+  }
+  h1 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px $black;
+    @media screen and (min-width: 40em) {
+      font-size: 2rem;
+    }
+    .text-xl {
+      font-size: 2rem;
+      @media screen and (min-width: 40em) {
+        font-size: 4rem;
+      }
+    }
+  }
+  .h1, h2, .h2, h3, .h3 {
+    line-height: 1.1;
   }
 }
-
-.site-hero-content {
+.hero-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  @media screen and (min-width: 40em) {
+    height: 40vh;
+  }
+  .hero--large & {
+    height: 40vh;
+    @media screen and (min-width: 40em) {
+      height: 65vh;
+    }
+  }
+  .bg--50 & {
+    opacity: 0.5;
+  }
+  .bg--80 & {
+    opacity: 0.8;
+  }
+}
+.hero-content {
   max-width: $global-width;
   margin: 0 auto;
   padding-left: 5%;
   padding-right: 5%;
+  z-index: 2;
   @media screen and (min-width: 40em) {
     padding-left: 40%;
   }
-  &.site-hero-content--fullwidth {
+  .hero-content--fullwidth & {
     @media screen and (min-width: 40em) {
       padding-left: 5%;
     }
@@ -34,14 +86,11 @@ $pc-hero-height: 65vh;
   &-inner {
     padding: 1rem;
   }
-  &-inner--light {
+  .hero-content-inner--light & {
     background: $color-white-transparent;
   }
-  &-inner--dark {
+  .hero-content-inner--dark & {
     background: $color-black-transparent;
-  }
-  .h1, h2, .h2, h3, .h3 {
-    line-height: 1.1;
   }
 }
 
