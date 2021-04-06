@@ -1,0 +1,31 @@
+
+<div class="card gallery-trigger float-right gallery-trigger--right" type="button" data-toggle="before_after" role="button">
+  <img src="/assets/img/remodel/before_after/cover.jpg" sizes="" alt="" class="" />
+  <div class="card-section">
+    <p>View our before_after Remodel gallery <a href="#">here</a> &rsaquo;</p>
+  </div>
+</div>
+
+<div class="gallery-wrap reveal"
+  id="before_after"
+  aria-labelledby="before_after_label"
+  aria-modal="true"
+  role="dialog"
+  data-animation-in="slide-in-right"
+  data-animation-out="fade-out"
+  data-reveal>
+  <button class="close-button" aria-label="Close Gallery" type="button" data-close><span aria-hidden="true">&times;</span></button>
+  <h3 id="before_after_label" class="gallery-label">before_after Remodel Gallery</h3>
+
+  <div class="image-gallery align-center">
+    <img class="gallery-main-image" src="/assets/img/remodel/before_after/after_2.jpg" alt="">
+    <br>
+    <ul class="menu gallery-thumbs align-center">
+      {{#each before_after}}
+      <li>
+        <a class="gallery-thumb" data-image="/assets/img/remodel/before_after/{{ this }}"><img src="/assets/img/remodel/before_after/{{ this }}" alt=""></a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -55,8 +55,18 @@ if ($stickyBar.length && $siteContent.length) {
 }
 */
 
-$('.gallery-thumb').on('click', function () {
-  var elem = $('#gallery-main-image');
-  elem.attr('src', $(this).data('image'));
-  Foundation.Motion.animateIn(elem, 'fade-in');
-})
+$('.image-gallery').each(function() {
+  var $mainImg = $(this);
+  var elem = $mainImg.find('.gallery-main-image');
+
+  $('.gallery-thumb').on('click', function (e) {
+    e.preventDefault;
+    elem.attr('src', $(this).data('image'));
+    Foundation.Motion.animateIn(elem, 'fade-in');
+  })
+
+});
+
+
+// residential galleries
+

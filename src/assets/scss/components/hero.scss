@@ -1,7 +1,8 @@
 
 .hero {
-  align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 25vh;
   margin-bottom: 2rem;
   position: relative;
@@ -44,6 +45,7 @@
     line-height: 1.1;
   }
 }
+
 .hero-bg {
   position: absolute;
   left: 0;
@@ -69,20 +71,10 @@
     opacity: 0.8;
   }
 }
+
 .hero-content {
-  max-width: $global-width;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
   z-index: 2;
-  @media screen and (min-width: 40em) {
-    padding-left: 40%;
-  }
-  .hero-content--fullwidth & {
-    @media screen and (min-width: 40em) {
-      padding-left: 5%;
-    }
-  }
+  width: 100%;
   &-inner {
     padding: 1rem;
   }

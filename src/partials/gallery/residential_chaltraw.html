@@ -1,0 +1,31 @@
+
+<div class="card gallery-trigger float-right gallery-trigger--right" type="button" data-toggle="chaltraw" role="button">
+  <img src="/assets/img/remodel/chaltraw/cover.jpg" sizes="" alt="" class="" />
+  <div class="card-section">
+    <p> <a href="#">Chaltraw Bath Remodel &rsaquo;</a> </p>
+  </div>
+</div>
+
+<div class="gallery-wrap reveal"
+  id="chaltraw"
+  aria-labelledby="chaltraw_label"
+  aria-modal="true"
+  role="dialog"
+  data-animation-in="slide-in-right"
+  data-animation-out="fade-out"
+  data-reveal>
+  <button class="close-button" aria-label="Close Gallery" type="button" data-close><span aria-hidden="true">&times;</span></button>
+  <h3 id="chaltraw_label" class="gallery-label">chaltraw Remodel Gallery</h3>
+
+  <div class="image-gallery align-center">
+    <img class="gallery-main-image" src="/assets/img/remodel/chaltraw/110_2420.jpg" alt="">
+    <br>
+    <ul class="menu gallery-thumbs align-center">
+      {{#each chaltraw}}
+      <li>
+        <a class="gallery-thumb" data-image="/assets/img/remodel/chaltraw/{{ this }}"><img src="/assets/img/remodel/chaltraw/{{ this }}" alt=""></a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

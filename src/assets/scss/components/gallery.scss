@@ -26,3 +26,26 @@
     }
   }
 }
+
+.gallery-trigger {
+  cursor: pointer;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,0.5);
+  width: 50%;
+  @include breakpoint(large) {
+    width: 30%;
+  }
+  &--right {
+    margin: 1rem 0 1rem 1rem;
+    @include breakpoint(large) {
+      margin: 1rem 0 1rem 2rem;
+    }
+  }
+  &--left {
+    margin: 1rem 1rem 1rem 0;
+    @include breakpoint(large) {
+      margin: 1rem 2rem 1rem 0;
+    }
+  }
+}
+
+
