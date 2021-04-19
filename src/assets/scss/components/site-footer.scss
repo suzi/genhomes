@@ -2,21 +2,17 @@ $site-footer-bg: #2c3840;
 
 .site-footer {
   background: $site-footer-bg;
-  color: lighten($site-footer-bg, 40%);
+  color: $white;
   padding: 2rem 0 0;
-
   .site-footer-menu-social a {
     color: $white;
   }
-
   .column-block {
     margin-bottom: 30px;
   }
-
   > .row {
     margin-bottom: 1rem;
   }
-
   @include breakpoint(small only) {
     .columns {
       margin-bottom: 2rem;
@@ -38,15 +34,16 @@ $site-footer-bg: #2c3840;
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
-
+.site-footer-hello {
+  padding-right: 0;
+  @include breakpoint(medium up) {
+    padding-right: 2rem;
+  }
+}
 .site-footer-block {
   display: flex;
   margin-bottom: 1rem;
 
-  .fa {
-    font-size: 2rem;
-    color: darken($site-footer-bg, 20%);
-  }
 
   p {
     margin-left: 1rem;
@@ -56,26 +53,53 @@ $site-footer-bg: #2c3840;
 
 .site-footer-bottom {
   background: darken($site-footer-bg, 20%);
+  margin-top: 1rem;
   padding: 1rem 0;
-
   p,
   .menu {
     margin-bottom: 0;
   }
-
+  .links {
+    order: 0;
+    @include breakpoint(medium up) {
+      order: 1;
+    }
+  }
+  .copyright {
+    order: 1;
+    text-align: center;
+    font-size: .75rem;
+    padding-top: .75rem;
+    @include breakpoint(medium up) {
+      order: 0;
+      text-align: left;
+    }
+  }
   .site-footer-bottom-links {
     justify-content: flex-end;
-
     a {
       color: $white;
     }
-
-    @include breakpoint(medium down) {
-      justify-content: center;
-    }
   }
+  .menu a.social {
+    padding: .5rem;
+  }
+}
 
-  @include breakpoint(medium down) {
+.bbb {
+  img {
+    height: 48px;
+  }
+  .rating {
+    background-color: rgb(0, 90, 120);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    //font-size: 25px;
+    font-weight: bold;
+    height: 48px;
+    line-height: 48px;
     text-align: center;
+    width: 48px;
   }
 }

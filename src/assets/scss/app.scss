@@ -83,3 +83,22 @@ $color-cream: #FFFCF5;
 .text--light {
   color: $white;
 }
+
+.review-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.review-date {
+  font-weight: 500;
+}
+
+h1.display {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2rem;
+  //letter-spacing: .1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  @include breakpoint(medium up) {
+    font-size: 3.5rem;
+  }
+}

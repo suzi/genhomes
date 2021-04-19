@@ -1,3 +1,68 @@
+
+@mixin hamburger2(
+  $color: $white,
+  $color-hover: yellow,
+  $width: 20px,
+  $height: 16px,
+  $weight: 2px,
+  $bars: 3
+) {
+  // box-shadow CSS output
+  $shadow: ();
+  $hover-shadow: ();
+
+  // Spacing between bars is calculated based on the total height of the icon and the weight of each bar
+  $spacing: ($height - ($weight * $bars)) / ($bars - 1);
+
+  @if unit($spacing) == 'px' {
+    $spacing: floor($spacing);
+  }
+
+  @for $i from 2 through $bars {
+    $offset: ($weight + $spacing) * ($i - 1);
+    $shadow: append($shadow, 0 $offset 0 $color, comma);
+  }
+
+  // Icon container
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: $width;
+  height: $height;
+  cursor: pointer;
+
+  // Icon bars
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: $weight;
+
+    background: $color;
+    box-shadow: $shadow;
+
+    content: '';
+  }
+
+  // Hover state
+  @if $color-hover {
+    // Generate CSS
+    @for $i from 2 through $bars {
+      $offset: ($weight + $spacing) * ($i - 1);
+      $hover-shadow: append($hover-shadow, 0 $offset 0 $color-hover, comma);
+    }
+
+    &:hover::after {
+      background: $color-hover;
+      box-shadow: $hover-shadow;
+    }
+  }
+}
+
+
 .no-js {
   @include breakpoint(small only) {
     // .top-bar {
@@ -11,6 +76,7 @@
     // }
   }
 }
+
 
 [data-sticky] {
   width: 100%;
@@ -31,7 +97,7 @@
 }
 .header-logo {
   width: 100%;
-  max-width: 300px;
+  max-width: 240px;
 }
 .header-menu {
   background-color: $white;
@@ -54,5 +120,76 @@
   font-weight: 700;
   &:hover {
     color: $anchor-color;
+  }
+  .menubar-container-v2 & {
+    color: $white;
+  }
+}
+
+
+.menubar-container-v2 {
+  background: #2c3840;
+  box-shadow: 0 2px 8px -1px rgba(0,0,0,0.5);
+  position: relative;
+  .header-menu {
+    background-color: #2c3840;
+    //color: $white;
+    &-content {
+      margin-top: 2.25rem;
+    }
+    a {
+      //color: $white;
+    }
+    .close-button {
+      //color: $white;
+    }
+    .menu {
+      margin-right: 1rem;
+    }
+  }
+  .title-bar {
+    padding: $titlebar-padding;
+    background: #2c3840;
+    color: $white;
+  }
+  .title-bar-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: $titlebar-text-font-weight;
+  }
+  .menu-icon-v2 {
+    @include hamburger2();
+    text-indent: -9999px;
+  }
+}
+
+.header-menu-v2 {
+  background-color: #2c3840;
+  color: $white;
+  &.off-canvas {
+    width: 80%;
+    @include breakpoint(medium up) {
+      max-width: 40%;
+    }
+  }
+
+  &-content {
+    margin-top: 2.25rem;
+  }
+  a {
+    color: $white;
+  }
+  .close-button {
+    color: $white;
+  }
+  .menu {
+    margin-right: 1rem;
+  }
+  .social {
+    padding: 2rem;
+    a {
+      display: inline-block;
+      margin: 0 .5rem;
+    }
   }
 }
