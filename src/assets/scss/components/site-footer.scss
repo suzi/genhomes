@@ -1,7 +1,13 @@
-$site-footer-bg: #2c3840;
+//$site-footer-bg: #2c3840;
+
+$site-footer-bg:#96a580;
+// $color-light-green: #96a580;
+
+// $color-dark-green: #63704f;
+
 
 .site-footer {
-  background: $site-footer-bg;
+  background: $color-light-green;
   color: $white;
   padding: 2rem 0 0;
   .site-footer-menu-social a {
@@ -52,7 +58,7 @@ $site-footer-bg: #2c3840;
 }
 
 .site-footer-bottom {
-  background: darken($site-footer-bg, 20%);
+  background: $color-dark-green;
   margin-top: 1rem;
   padding: 1rem 0;
   p,

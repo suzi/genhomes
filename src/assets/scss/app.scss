@@ -71,14 +71,20 @@
 // custom vars
 $color-white-transparent: rgba(255,255,255,0.8);
 $color-black-transparent: rgba(0,0,0,0.5);
-$color-cream: #FFFCF5;
+$color-cream: #f4f1ea;
+// light gream #fbfaf7
+// header cream
 
+$color-light-green: #96a580;
+
+$color-dark-green: #63704f;
 
 @import 'components/sticky-menu';
 @import 'components/gallery';
 @import 'components/hero';
 @import 'components/site-footer';
 @import 'components/filter-simple';
+
 
 .text--light {
   color: $white;
