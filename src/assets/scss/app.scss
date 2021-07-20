@@ -107,4 +107,23 @@ h1.display {
   @include breakpoint(medium up) {
     font-size: 3.5rem;
   }
+  &.small-heading {
+    @include breakpoint(medium up) {
+      font-size: 2rem;
+    }
+  }
+}
+
+h1 a,
+h2 a {
+  color: #485E2A;
+  &:visited,
+  &:active,
+  &:hover {
+    color: #485E2A;
+  }
+}
+
+.grid-container.page-content {
+  padding: 0 1em;
 }

@@ -78,7 +78,7 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #000000;
+$black: #1c1c1c;
 $white: #fbfaf7;
 $body-background: $white;
 $body-font-color: $black;
@@ -170,10 +170,10 @@ $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
-$anchor-color: #485E2A;
+$anchor-color: #336699;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
+$anchor-text-decoration-hover: underline;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
@@ -884,9 +884,13 @@ $topbar-unstack-breakpoint: medium;
 $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
+// $grid-margin-gutters: (
+//   small: 20px,
+//   medium: 30px
+// );
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px
+  small: 1em,
+  medium: 1em
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
